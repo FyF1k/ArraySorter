@@ -120,7 +120,7 @@ namespace ArraySorter
                 tbArray.Text += arr[i] + " ";
             }
         }
-
+        //
         private void btnHelp_Click(object sender, RoutedEventArgs e)//Окно помощи
         {
             Window helpWindow = new Window();
