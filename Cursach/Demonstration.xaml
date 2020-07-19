@@ -27,7 +27,7 @@
         <StackPanel Grid.Row="1">
             <StackPanel Orientation="Horizontal" Margin="5,5,5,0">
                 <Label Content="Шагов" Margin="5" Width="50" Background="White" BorderBrush="Black"/>
-                <Label x:Name="lbNStep" Content="0" Margin="0,5" Width="27" Background="White" BorderBrush="Black"/>
+                <Label x:Name="lbNStep" Content="0" Margin="0,5" Width="35" Background="White" BorderBrush="Black" RenderTransformOrigin="1.111,0.692"/>
             </StackPanel>
             <TextBox x:Name="tbStep" IsReadOnly="True" Height="39" Margin="5,5,0,5" Width="145" MaxWidth="228" HorizontalAlignment="Left" />
         </StackPanel>
