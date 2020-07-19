@@ -1,0 +1,51 @@
+﻿<Window x:Class="ArraySorter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArraySorter"
+        mc:Ignorable="d"
+        Title="Демонстрация алгоритмов сортировки" Height="213.5" Width="403"
+        Loaded="WMain_Loaded"
+        x:Name="wMain" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" OpacityMask="Black" BorderBrush="Black"
+        >
+    <Window.Background>
+        <ImageBrush ImageSource="Images/Matrix.jpg"></ImageBrush>
+    </Window.Background>
+    <Grid HorizontalAlignment="Right" Width="383" Margin="0,0,4,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto" MinHeight="65"/>
+        </Grid.RowDefinitions>
+        <DockPanel Margin="0,0,0,35" Grid.RowSpan="2">
+            <StackPanel Margin="0,0,0,-35" Width="205">
+                <Label Margin="5" Content="Введите массив:" FontSize="16" Foreground="White" Height="30"/>
+                <TextBox Margin="5" MaxWidth="200" x:Name="tbArray" MaxHeight="54" MinWidth="200" PreviewTextInput="TbArray_PreviewTextInput" AcceptsReturn="True" Height="25" FontSize="15"/>
+                <Button x:Name="btnRand" Content="Создать массив" Margin="5,5,0,5" Width="195" HorizontalAlignment="Left" Click="BtnRand_Click" Background="#FF00F3FF" Height="25"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right" Width="183" Margin="0,0,0,-35">
+                <Label Margin="0,5,5,5" Content="Выберите настройки:" Height="30" Foreground="White" FontSize="16"/>
+                <ComboBox Margin="0,5" x:Name="cbAlgorithm" Height="25" RenderTransformOrigin="0.5,0.5">
+                    <ComboBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-0.895"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.234"/>
+                        </TransformGroup>
+                    </ComboBox.RenderTransform>
+                    <ComboBoxItem Content="Пузырьковая сортировка" FontSize="11"/>
+                    <ComboBoxItem Content="Сортировка выбором" FontSize="11"/>
+                    <ComboBoxItem Content="Сортировка расчёской" FontSize="11"/>
+                </ComboBox>
+                <ComboBox x:Name="cbState" Margin="0,5" Height="25">
+                    <ComboBoxItem Content="Неубывающий"/>
+                    <ComboBoxItem Content="Невозрастающий"/>
+                </ComboBox>
+            </StackPanel>
+        </DockPanel>
+        <Button x:Name="btnStart" Content="Начать" Grid.Row="2" HorizontalAlignment="Center" Margin="5,2,183,5" Width="195" IsDefault="True" Click="BtnStart_Click" Background="#FF66E40F" BorderBrush="#FF307211" FontSize="24"/>
+        <Button x:Name="btnHelp" Content="Помощь" Grid.Row="2" HorizontalAlignment="Center" Margin="205,2,0,5" Width="178" IsDefault="True" Click="btnHelp_Click" Background="Yellow" BorderBrush="#FF307211" FontSize="24"/>
+    </Grid>
+</Window>
